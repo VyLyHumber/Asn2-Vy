@@ -1,0 +1,54 @@
+<h1>{{title}}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Movie ID</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Metascore</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each jsonData}}
+            <tr class="{{highlightMetascore Metascore}}">
+                <td>{{Movie_ID}}</td>
+                <td>{{Title}}</td>
+                <td>{{Genre}}</td>
+                <td>{{Year}}</td>
+                <td>{{Director}}</td>
+                <td>{{Metascore}}</td>
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="6">Cannot find movies</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+    }
+    th {
+        border: 1px solid #cccccc;
+        padding: 8px;
+        text-align: center;
+    }
+    td {
+        border: 1px solid #cccccc;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #fdc220;
+    }
+    .highlight {
+        background-color: #e5e55f; /* Light red background for highlighted rows */
+    }
+</style>

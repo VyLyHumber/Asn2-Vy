@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+{{#each jsonData}}
+    <div>
+        <h3>{{Title}}</h3>
+        <p>Movie ID: {{Movie_ID}}</p>
+        <p>Genre: {{Genre}}</p>
+        <p>Year: {{Year}}</p>
+        <p>Director: {{Director}}</p>
+    </div>
+    <hr/>
+{{else}}
+    <p>Cannot find movies</p>
+{{/each}}
